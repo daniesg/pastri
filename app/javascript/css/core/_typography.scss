@@ -1,0 +1,49 @@
+@import "colors";
+
+body {
+  font-family: 'Mulish', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: $dark;
+}
+
+@mixin text-h1() {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+@mixin text-small() {
+  font-size: .75rem;
+  font-weight: 400;
+}
+
+h1, .text-h1 {
+  @include text-h1();
+}
+small, .text-small {
+  @include text-small();
+}
+
+.text-center {
+  text-align: center;
+}
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+
+@each $name, $color in $color-themes {
+  .text-#{$name} {
+    color: $color;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: $pink;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

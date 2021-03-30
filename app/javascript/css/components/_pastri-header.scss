@@ -1,0 +1,10 @@
+.pastri-header {
+  display: grid;
+  grid-template-columns: 2.5rem 1fr 2.5rem;
+  padding: 2.5rem 1rem 0;
+  align-items: center;
+
+  &-logo {
+    line-height: 0;
+  }
+}

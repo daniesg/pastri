@@ -1,0 +1,34 @@
+<%= render partial: "components/header", locals: { title: "Sign In" } %>
+
+<%= form_with model: @user, class: "mx-24 mt-32" do |f| %>
+  <div class="text-center mb-32">
+    <%= f.label :picture do %>
+    <span class="iconify" data-icon="mdi-account"></span>
+    <% end %>
+
+    <div class="text-right">
+      <%= f.file_field :picture %>
+    </div>
+  </div>
+
+  <%= f.label :email, class: "pastri-label" %>
+  <%= f.email_field :email, class: "pastri-input mb-16" %>
+
+  <%= f.label :name, class: "pastri-label" %>
+  <%= f.text_field :name, class: "pastri-input mb-16" %>
+
+  <%= f.label :address, class: "pastri-label" %>
+  <%= f.text_area :address, class: "pastri-input", rows: 4 %>
+
+  <button class="btn btn-main btn-block mt-16">Signup</button>
+<% end %>
+
+<% if @user.errors.present? %>
+  <p class="text-danger text-small text-center mt-12">
+    <%= @user.errors.full_messages.first %>
+  </p>
+<% end %>
+
+<p class="text-muted text-small mt-48 text-center">
+  Already have an account <%= link_to "Log In", new_session_path, class: "text-dark" %>
+</p>

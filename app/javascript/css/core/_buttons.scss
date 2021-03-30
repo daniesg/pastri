@@ -1,0 +1,22 @@
+@import "colors";
+
+.btn {
+  font-weight: 400;
+  color: $dark;
+  outline: 0;
+  border: 0;
+
+  &.btn-block {
+    display: block;
+    width: 100%;
+  }
+
+  @each $name, $color in $color-themes {
+    &.btn-#{$name} {
+      font-size: 1.125rem;
+      background-color: $color;
+      padding: 1rem 1.5rem;
+      border-radius: .5rem;
+    }
+  }
+}
