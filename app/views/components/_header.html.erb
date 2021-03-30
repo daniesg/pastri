@@ -1,0 +1,13 @@
+<%# title: String, optional %>
+
+<% title ||= "" %>
+
+<div class="pastri-header">
+  <%= link_to root_path, class: "pastri-header-logo" do %>
+    <%= image_tag "logo.svg", width: 40, height: 40 %>
+  <% end %>
+
+  <% if title.present? %>
+    <h1 class="text-center"><%= title %></h1>
+  <% end %>
+</div>

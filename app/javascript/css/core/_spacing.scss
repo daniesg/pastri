@@ -1,0 +1,76 @@
+$spacing: (
+  0:  0rem,
+  4:  .25rem,
+  8:  .5rem,
+  12: .75rem,
+  16: 1rem,
+  24: 1.5rem,
+  32: 2rem,
+  48: 3rem,
+  60: 3.75rem, 
+  72: 4.5rem,
+  80: 5rem,
+  96: 6rem
+);
+
+@each $name, $size in $spacing {
+  .ma-#{$name} {
+    margin: $size;
+  }
+
+  .mx-#{$name} {
+    margin-left: $size;
+    margin-right: $size;
+  }
+
+  .my-#{$name} {
+    margin-top: $size;
+    margin-bottom: $size;
+  }
+
+  .mt-#{$name} {
+    margin-top: $size;
+  }
+
+  .mr-#{$name} {
+    margin-right: $size;
+  }
+
+  .mb-#{$name} {
+    margin-bottom: $size;
+  }
+
+  .ml-#{$name} {
+    margin-left: $size;
+  }
+
+  .pa-#{$name} {
+    padding: $size;
+  }
+
+  .px-#{$name} {
+    padding-left: $size;
+    padding-right: $size;
+  }
+
+  .py-#{$name} {
+    padding-top: $size;
+    padding-bottom: $size;
+  }
+
+  .pt-#{$name} {
+    padding-top: $size;
+  }
+
+  .pr-#{$name} {
+    padding-right: $size;
+  }
+
+  .pb-#{$name} {
+    padding-bottom: $size;
+  }
+
+  .pl-#{$name} {
+    padding-left: $size;
+  }
+}

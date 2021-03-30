@@ -1,0 +1,14 @@
+$dark: #2F2F37;
+$light-gray: #F3F3F3;
+$yellow: #FFDF33;
+$gray: #9F9FAD;
+$pink: #E53EA0;
+$red: #FF5252;
+
+$color-themes: (
+  'main': $yellow,
+  'dark': $dark,
+  'muted': $gray,
+  'secondary': $pink,
+  'danger': $red
+);

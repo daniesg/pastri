@@ -1,0 +1,10 @@
+* {
+  box-sizing: border-box;
+}
+
+@import "core/buttons";
+@import "core/form";
+@import "core/spacing";
+@import "core/typography";
+
+@import "components/pastri-header";
